@@ -1,4 +1,4 @@
-<title>POMSYS | accused info update</title>
+<title>POMSYS | Resident info update</title>
 <?php 
     include 'navbar.php';
 
@@ -14,12 +14,12 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-sm-6">
-            <h3>Accused info</h3>
+            <h3>Resident info</h3>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="dashboard.php">Home</a></li>
-              <li class="breadcrumb-item active">Accused info</li>
+              <li class="breadcrumb-item active">Resident info</li>
             </ol>
           </div>
         </div>
@@ -107,13 +107,13 @@
                       <div class=" d-flex justify-content-center bg-dark d-block m-auto" style="max-height: 120px; min-height: 120px; width: 120px; border: 3px solid darkgray;">
                         <img src="../images-residence/<?php echo $row['image']; ?>" alt="" class="img-fluid d-block m-auto">
                       </div>
-                      <p class="text-center text-sm text-muted">Accused photo</p>
+                      <p class="text-center text-sm text-muted">Resident photo</p>
                     </div>
                   </div>
                       
                   <div class="row p-2">
                     <div class="col-lg-12 mt-3 mb-2 col-md-12 col-sm-12 col-12">
-                      <a class="h5 text-primary"><b>Accused address</b></a>
+                      <a class="h5 text-primary"><b>Residence address</b></a>
                       <div class="dropdown-divider"></div>
                     </div>
                       <div class="col-lg-9 col-md-6 col-12">
@@ -169,16 +169,75 @@
                         <p class="text-center text-sm text-muted">Digital Signature</p>
                       </div> 
                   </div> 
-                  <div class="col-lg-12 mt-3 mb-2">
-                      <a class="h5 text-primary"><b>Crime Records</b></a>
+
+
+                  <div class="row p-2">
+                    <div class="col-lg-12 mt-3 mb-2">
+                      <a class="h5 text-primary"><b>Additional information</b></a>
                       <div class="dropdown-divider"></div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                        <div class="form-group">
-                          <span class="text-muted"><b>History</b></span></small>
+                    <!-- FAMILY INFO -->
+                    <div class="col-lg-3 col col-md-3 col-sm-6 col-12">
+                      <div class="form-group">
+                          <small class="text-muted"><b>Family Indicator:</b></small>
                           <h6><?php echo $row['familyIndicator']; ?></h6>
                         </div>
-                      </div>
+                    </div>
+                    <div class="col-lg-3 col col-md-3 col-sm-6 col-12">
+                      <div class="form-group">
+                          <small class="text-muted"><b>Family Head Name:</b></small>
+                          <h6><?php echo $row['headName']; ?></h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col col-md-3 col-sm-6 col-12">
+                      <div class="form-group">
+                          <small class="text-muted"><b>Family Role:</b></small>
+                          <h6><?php echo $row['familyRole']; ?></h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col col-md-3 col-sm-6 col-12"></div>
+                    <!-- END FAMILY INFO -->
+                    <div class="col-lg-3 col col-md-3 col-sm-6 col-12">
+                      <div class="form-group">
+                          <small class="text-muted"><b>Sector:</b></small>
+                          <h6><?php echo $row['sector']; ?></h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col col-md-3 col-sm-6 col-12">
+                      <div class="form-group">
+                          <small class="text-muted"><b>Residence status:</b></small>
+                          <h6><?php echo $row['resident_status']; ?></h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col col-md-3 col-sm-6 col-12">
+                      <div class="form-group">
+                          <small class="text-muted"><b>Voter status:</b></small>
+                          <h6><?php echo $row['voter_status']; ?></h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col col-md-3 col-sm-6 col-12">
+                      <div class="form-group">
+                          <small class="text-muted"><b>ID status:</b></small>
+                          <h6><?php echo $row['ID_status']; ?></h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col col-md-3 col-sm-6 col-12">
+                      <div class="form-group">
+                          <small class="text-muted"><b>QR status:</b></small>
+                          <h6><?php echo $row['QR_status']; ?></h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col col-md-3 col-sm-6 col-12">
+                      <div class="form-group">
+                          <small class="text-muted"><b>Month of stay:</b></small>
+                          <h6><?php echo $row['months_of_stay']; ?></h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col col-md-3 col-sm-6 col-12">
+                      <div class="form-group">
+                          <small class="text-muted"><b>Years of stay:</b></small>
+                          <h6><?php echo $row['years_of_stay']; ?></h6>
+                        </div>
                     </div>
                   </div>
                  

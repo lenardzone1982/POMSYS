@@ -46,12 +46,6 @@
   <link rel="stylesheet" href="../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
   <!-- Theme style -->
 
-  <!-- Select2 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-
-  <!-- Select2 JS -->
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -356,10 +350,67 @@
             <a href="dashboard.php" class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'dashboard.php') ? 'active' : ''; ?>"><i class="fa-solid fa-gauge"></i><p>&nbsp;&nbsp; Dashboard</p></a>
           </li>
           <li class="nav-item">
-            <a href="resident.php" class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'resident.php' || basename($_SERVER['PHP_SELF']) == 'resident_add.php' || basename($_SERVER['PHP_SELF']) == 'resident_update.php' || basename($_SERVER['PHP_SELF']) == 'resident_view.php' || basename($_SERVER['PHP_SELF']) == 'resident_document.php') ? 'active' : ''; ?>"> <i class="fa-solid fa-user-group"></i><p>&nbsp; Accused</p></a>
+            <a href="resident.php" class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'resident.php' || basename($_SERVER['PHP_SELF']) == 'resident_add.php' || basename($_SERVER['PHP_SELF']) == 'resident_update.php' || basename($_SERVER['PHP_SELF']) == 'resident_view.php' || basename($_SERVER['PHP_SELF']) == 'resident_document.php') ? 'active' : ''; ?>"> <i class="fa-solid fa-user-group"></i><p>&nbsp; Residence</p></a>
           </li>
           <li class="nav-item">
+            <a href="documents.php" class="nav-link 
+            <?php echo (
+              basename($_SERVER['PHP_SELF']) == 'documents.php' || 
+              basename($_SERVER['PHP_SELF']) == 'documents_requirements.php' || 
+              basename($_SERVER['PHP_SELF']) == 'cert_brgyClearance.php' ||
+              basename($_SERVER['PHP_SELF']) == 'cert_brgyConstruction.php' ||
+              basename($_SERVER['PHP_SELF']) == 'cert_brgyID.php' ||
+              basename($_SERVER['PHP_SELF']) == 'cert_brgyIndigency.php' ||
+              basename($_SERVER['PHP_SELF']) == 'cert_brgyJobseeker.php' ||
+              basename($_SERVER['PHP_SELF']) == 'cert_brgyNon-Residency.php' ||
+              basename($_SERVER['PHP_SELF']) == 'cert_brgyOwnership.php' ||
+              basename($_SERVER['PHP_SELF']) == 'cert_brgyPermit.php' ||
+              basename($_SERVER['PHP_SELF']) == 'cert_brgyPlate.php' ||
+              basename($_SERVER['PHP_SELF']) == 'cert_brgyResidency.php'
+              ) ? 'active' : ''; ?>"><i class="fa-solid fa-file"></i><p>&nbsp;&nbsp;&nbsp;  Documents</p></a>
+          </li>
+
+          <li class="nav-item">
+          <a href="#" class="nav-link
+            <?php
+            echo (
+            basename($_SERVER['PHP_SELF']) == 'brgyIncome.php' ||
+            basename($_SERVER['PHP_SELF']) == 'documentsIncome.php' ||
+            basename($_SERVER['PHP_SELF']) == 'brgyIncome_list.php' ||
+            basename($_SERVER['PHP_SELF']) == 'brgyIncome_Add.php' 
+            ) ? 'active' : '';
+            ?>
+            ">
+            <i class="fa-solid fa-sack-dollar"></i><p>&nbsp;&nbsp; Brgy Income<i class="right fas fa-angle-left"></i></p>
+          </a>
+          <ul class="nav nav-treeview"
+            <?php
+            echo (
+            basename($_SERVER['PHP_SELF']) == 'brgyIncome.php' ||
+            basename($_SERVER['PHP_SELF']) == 'documentsIncome.php' ||
+            basename($_SERVER['PHP_SELF']) == 'brgyIncome_list.php' ||
+            basename($_SERVER['PHP_SELF']) == 'brgyIncome_Add.php' 
+            ) ? 'style="display: block;"' : '';
+            ?>
+            >
+            <li class="nav-item">
+               <a href="brgyIncome.php" class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'brgyIncome.php') ? 'active' : ''; ?>"><i class="fa-solid fa-sack-dollar"></i><p>&nbsp;&nbsp; Income report</p></a>
+              </li>
+              <li class="nav-item">
+               <a href="documentsIncome.php" class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'documentsIncome.php') ? 'active' : ''; ?>"><i class="fa-solid fa-sack-dollar"></i><p>&nbsp;&nbsp; Documents income</p></a>
+              </li>
+              <li class="nav-item">
+               <a href="brgyIncome_list.php" class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'brgyIncome_list.php' || basename($_SERVER['PHP_SELF']) == 'brgyIncome_Add.php') ? 'active' : ''; ?>"><i class="fa-solid fa-sack-dollar"></i><p>&nbsp;&nbsp; Add income  </p></a>
+              </li>
+          </ul>
+        </li>
+
+          <li class="nav-item">
             <a href="blotter.php" class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'blotter.php' || basename($_SERVER['PHP_SELF']) == 'blotter_add.php' || basename($_SERVER['PHP_SELF']) == 'blotter_update.php' || basename($_SERVER['PHP_SELF']) == 'blotter_view.php') ? 'active' : ''; ?>"><i class="fas fa-book"></i><p>&nbsp;&nbsp; Blotter</p></a>
+          </li>
+
+          <li class="nav-item">
+            <a href="officials.php" class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'officials.php') ? 'active' : ''; ?>"><i class="fa-solid fa-users"></i><p>&nbsp; Brgy. Profiles</p></a>
           </li>
 
          <!--  <li class="nav-item">
